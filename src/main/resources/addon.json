@@ -1,0 +1,10 @@
+{
+"uuid": "%uuid%",
+"name": "DurabilityWarningAddon",
+"mainClass": "net.craftycram.durabilitywarningaddon.Main",
+"description": "Warns you if your tools durability reaches a certain limit!",
+"version": 1,
+"author": "craftycram",
+"category": 2,
+"icon": "http://link-to-icon.net/icon64x64.png"
+}
