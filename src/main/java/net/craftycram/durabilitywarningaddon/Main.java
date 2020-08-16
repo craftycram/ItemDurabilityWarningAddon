@@ -5,16 +5,17 @@ import net.labymod.settings.elements.ControlElement;
 import net.labymod.settings.elements.SettingsElement;
 import net.labymod.settings.elements.SliderElement;
 import net.labymod.utils.Consumer;
+import net.labymod.utils.Material;
 
 import java.util.List;
 
 public class Main extends LabyModAddon {
 
-    protected static int warningDurability;
+    private int warningDurability;
 
     @Override
     public void onEnable() {
-        getApi().registerForgeListener( new ClickListener() );
+        //getApi().registerForgeListener( new ClickListener() );
     }
 
     @Override
@@ -26,6 +27,7 @@ public class Main extends LabyModAddon {
     protected void fillSettings(List<SettingsElement> list) {
 
         SliderElement scalingSliderElement = new SliderElement("Warning Durability" /* Display name */,
+                //new ControlElement.IconData(Material.IRON_PICKAXE) /* setting's icon */, 40 /* current value */);
                 new ControlElement.IconData("icons/durability.png") /* setting's icon */, 40 /* current value */);
 
         // Setting the slider's min & max values

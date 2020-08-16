@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 
 
-import static net.craftycram.durabilitywarningaddon.Main.warningDurability;
+//import static net.craftycram.durabilitywarningaddon.Main.warningDurability;
 
 public class ClickListener {
 
@@ -19,7 +19,8 @@ public class ClickListener {
         {
             ItemStack item = player.getCurrentEquippedItem();
             System.out.println(item.getUnlocalizedName());
-            if (item.getItemDamage() < warningDurability) {
+            //if (item.getItemDamage() < warningDurability) {
+            if (item.getItemDamage() < 60) {
                 player.playSound("note.pling", 100, 0);
             }
         }
