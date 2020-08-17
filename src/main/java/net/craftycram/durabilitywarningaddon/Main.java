@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Main extends LabyModAddon {
 
-    private int warningDurability;
+    static int warningDurability;
 
     @Override
     public void onEnable() {
