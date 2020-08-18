@@ -15,7 +15,7 @@ public class Main extends LabyModAddon {
 
     @Override
     public void onEnable() {
-        //getApi().registerForgeListener( new ClickListener() );
+        getApi().registerForgeListener( new ClickListener() );
     }
 
     @Override

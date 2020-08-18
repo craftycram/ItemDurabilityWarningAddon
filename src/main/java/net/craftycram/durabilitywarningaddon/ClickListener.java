@@ -10,17 +10,19 @@ public class ClickListener {
 
     @SubscribeEvent
     public void onMouseInputEvent(InputEvent.MouseInputEvent event) {
-        /*EntityPlayer player = Minecraft.getMinecraft().thePlayer;
-        if (player.getEntityWorld().isRemote) {
+        System.out.println(Minecraft.class);
+        EntityPlayer player = Minecraft.getMinecraft().thePlayer;
+        System.out.println(player);
+        //if (player.getEntityWorld().isRemote) {
             if (player.getCurrentEquippedItem() != null) {
             ItemStack item = player.getCurrentEquippedItem();
             System.out.println(item.getUnlocalizedName());
-            if (item.getItemDamage() < Main.warningDurability) {
+            if (item.getItemDamage() > Main.warningDurability) {
             //if (item.getItemDamage() < 60) {
             player.playSound("note.pling", 100, 0);
             }
             }
-        }*/
+        //}*/
 
     }
 
