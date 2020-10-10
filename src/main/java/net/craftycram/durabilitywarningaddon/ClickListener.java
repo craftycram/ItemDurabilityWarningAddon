@@ -16,8 +16,13 @@ public class ClickListener {
     public void onMouseInputEvent(final InputEvent.MouseInputEvent event) {
         final EntityPlayer player = Minecraft.getMinecraft().thePlayer;
         final ItemStack item = player.getCurrentEquippedItem();
-        if (item == null) { return; }
-        if (!item.isItemStackDamageable()) { return; };
+        if (item == null) {
+            return;
+        }
+        if (!item.isItemStackDamageable()) {
+            return;
+        }
+        ;
         player.addChatMessage(new ChatComponentText((item.getMaxDamage() - item.getItemDamage()) + " - " + delta + " " + Main.warningDurability));
         if (Minecraft.getMinecraft().mouseHelper.deltaX == 0 && Minecraft.getMinecraft().mouseHelper.deltaY == 0 || delta) {
             delta = true;
@@ -25,7 +30,6 @@ public class ClickListener {
                 player.playSound("note.pling", 100, 0);
             }
         }
-        delta = Minecraft.getMinecraft().mouseHelper.deltaX == 0 && Minecraft.getMinecraft().mouseHelper.deltaY == 0;
     }
 
 }

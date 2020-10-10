@@ -2,6 +2,7 @@
 "uuid": "%uuid%",
 "name": "DurabilityWarningAddon",
 "mainClass": "net.craftycram.durabilitywarningaddon.Main",
+"transformerClass": "met.craftycram.durabilitywarningaddon.asm.ItemUseTransformer",
 "description": "Warns you if your tools durability reaches a certain limit!",
 "version": 1,
 "author": "craftycram",
