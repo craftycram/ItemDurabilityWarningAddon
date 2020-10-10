@@ -26,9 +26,7 @@ public class Main extends LabyModAddon {
     @Override
     protected void fillSettings(List<SettingsElement> list) {
 
-        SliderElement scalingSliderElement = new SliderElement("Warning Durability" /* Display name */,
-                //new ControlElement.IconData(Material.IRON_PICKAXE) /* setting's icon */, 40 /* current value */);
-                new ControlElement.IconData("icons/durability.png") /* setting's icon */, 40 /* current value */);
+        SliderElement scalingSliderElement = new SliderElement("Warning Durability", this, new ControlElement.IconData("icons/durability.png"), "warningDurability",40);
 
         // Setting the slider's min & max values
         scalingSliderElement.setRange(10, 100);
