@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent;
 
+
 public class ClickListener {
 
     @SubscribeEvent
@@ -17,10 +18,13 @@ public class ClickListener {
             if (player.getCurrentEquippedItem() != null) {
             ItemStack item = player.getCurrentEquippedItem();
             System.out.println(item.getUnlocalizedName());
-            if (item.getItemDamage() > Main.warningDurability) {
-            //if (item.getItemDamage() < 60) {
-            player.playSound("note.pling", 100, 0);
+            if (Minecraft.getMinecraft().mouseHelper.deltaX == 0 && Minecraft.getMinecraft().mouseHelper.deltaY == 0) {
+                if (item.getMaxDamage() - item.getItemDamage() > Main.warningDurability) {
+                    //if (item.getItemDamage() < 60) {
+                    player.playSound("note.pling", 100, 0);
+                }
             }
+
             }
         //}*/
 
