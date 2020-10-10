@@ -17,10 +17,8 @@ public class ClickListener {
         //if (player.getEntityWorld().isRemote) {
             if (player.getCurrentEquippedItem() != null) {
             ItemStack item = player.getCurrentEquippedItem();
-            System.out.println(item.getUnlocalizedName());
             if (Minecraft.getMinecraft().mouseHelper.deltaX == 0 && Minecraft.getMinecraft().mouseHelper.deltaY == 0) {
                 if (item.getMaxDamage() - item.getItemDamage() > Main.warningDurability) {
-                    //if (item.getItemDamage() < 60) {
                     player.playSound("note.pling", 100, 0);
                 }
             }
