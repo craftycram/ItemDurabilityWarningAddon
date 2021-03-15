@@ -22,11 +22,15 @@ public class ClickListener {
         if (!item.isItemStackDamageable()) {
             return;
         }
-
-        player.addChatMessage(new ChatComponentText((item.getMaxDamage() - item.getItemDamage()) + " - " + delta + " " + Main.warningDurability));
+        int durability = item.getMaxDamage() - item.getItemDamage();
+        int percentage = (int)((double)durability / (double)item.getMaxDamage() * 100);
+        // player.addChatMessage(new ChatComponentText(durability + " - " + delta + " " + Main.warningDurability));
+        // player.addChatMessage(new ChatComponentText(item.getMaxDamage() + " - " + item.getItemDamage() + " - "
+        // + ((double)durability / (double)item.getMaxDamage()) * 100));
+        player.addChatMessage(new ChatComponentText(percentage + " - " + Main.warningDurability));
         if (Minecraft.getMinecraft().mouseHelper.deltaX == 0 && Minecraft.getMinecraft().mouseHelper.deltaY == 0 || delta) {
             delta = true;
-            if (item.getMaxDamage() - item.getItemDamage() < Main.warningDurability) {
+            if (percentage < Main.warningDurability) {
                 player.playSound("note.pling", 100, 0);
             }
         }
