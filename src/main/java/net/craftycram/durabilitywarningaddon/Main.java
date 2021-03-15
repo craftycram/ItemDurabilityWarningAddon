@@ -21,6 +21,8 @@ public class Main extends LabyModAddon {
     @Override
     public void loadConfig() {
         this.warningDurability = getConfig().has("warningDurability") ? getConfig().get("warningDurability").getAsInt() : 50; // <- default value 'true'
+        System.out.println(this.warningDurability);
+        System.out.println(getConfig().has("warningDurability") ? getConfig().get("warningDurability").getAsInt() : 50);
     }
 
     @Override
@@ -29,7 +31,7 @@ public class Main extends LabyModAddon {
         SliderElement scalingSliderElement = new SliderElement("Warning Durability", this, new ControlElement.IconData("icons/durability.png"), "warningDurability",40);
 
         // Setting the slider's min & max values
-        scalingSliderElement.setRange(10, 100);
+        scalingSliderElement.setRange(1, 100);
 
         // Setting slider steps
         scalingSliderElement.setSteps(100 /  100);
