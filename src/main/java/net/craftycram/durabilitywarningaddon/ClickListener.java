@@ -22,7 +22,7 @@ public class ClickListener {
         if (!item.isItemStackDamageable()) {
             return;
         }
-        ;
+
         player.addChatMessage(new ChatComponentText((item.getMaxDamage() - item.getItemDamage()) + " - " + delta + " " + Main.warningDurability));
         if (Minecraft.getMinecraft().mouseHelper.deltaX == 0 && Minecraft.getMinecraft().mouseHelper.deltaY == 0 || delta) {
             delta = true;
@@ -31,5 +31,4 @@ public class ClickListener {
             }
         }
     }
-
 }
