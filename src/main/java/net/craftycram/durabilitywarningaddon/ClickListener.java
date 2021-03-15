@@ -27,7 +27,7 @@ public class ClickListener {
         // player.addChatMessage(new ChatComponentText(durability + " - " + delta + " " + Main.warningDurability));
         // player.addChatMessage(new ChatComponentText(item.getMaxDamage() + " - " + item.getItemDamage() + " - "
         // + ((double)durability / (double)item.getMaxDamage()) * 100));
-        player.addChatMessage(new ChatComponentText(percentage + " - " + Main.warningDurability));
+        if (Main.debugMode) player.addChatMessage(new ChatComponentText(percentage + " - " + Main.warningDurability));
         if (Minecraft.getMinecraft().mouseHelper.deltaX == 0 && Minecraft.getMinecraft().mouseHelper.deltaY == 0 || delta) {
             delta = true;
             if (percentage < Main.warningDurability) {
