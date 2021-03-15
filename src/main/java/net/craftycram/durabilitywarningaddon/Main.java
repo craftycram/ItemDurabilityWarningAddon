@@ -1,6 +1,7 @@
 package net.craftycram.durabilitywarningaddon;
 
 import net.labymod.api.LabyModAddon;
+import net.labymod.core.asm.LabyModTransformer;
 import net.labymod.settings.elements.ControlElement;
 import net.labymod.settings.elements.SettingsElement;
 import net.labymod.settings.elements.SliderElement;
